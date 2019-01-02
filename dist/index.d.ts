@@ -11,5 +11,5 @@ export declare abstract class UnsubscribeOnDestroyComponent extends BaseClass im
 	ngOnDestroy(): void;
 
 
-	protected _unsubscribeAll(): void;
+	private __unsubscribeAll;
 }

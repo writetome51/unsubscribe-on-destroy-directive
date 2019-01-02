@@ -29,9 +29,9 @@ var UnsubscribeOnDestroyComponent = /** @class */ (function (_super) {
         return _this;
     }
     UnsubscribeOnDestroyComponent.prototype.ngOnDestroy = function () {
-        this._unsubscribeAll();
+        this.__unsubscribeAll();
     };
-    UnsubscribeOnDestroyComponent.prototype._unsubscribeAll = function () {
+    UnsubscribeOnDestroyComponent.prototype.__unsubscribeAll = function () {
         this._subscriptions.forEach(function (subscription) {
             if (typeof subscription !== ('undefined' || 'null')) {
                 subscription.unsubscribe();

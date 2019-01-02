@@ -78,7 +78,7 @@ protected   _runMethod_and_returnThis(
 ## Usage Example
 ```
 export class ExamplePageComponent extends UnsubscribeOnDestroyComponent 
-	implements OnDestroy, AfterViewInit {
+	implements AfterViewInit {
 
 	constructor() {
 		super();
@@ -93,13 +93,7 @@ export class ExamplePageComponent extends UnsubscribeOnDestroyComponent
 				this.subscriptionThree
 			]
 		);
-	}
-
-
-	// Overrides ngOnDestroy():
-	ngOnDestroy() {
-		super.ngOnDestroy();
-		// do other things...
+		// And that's all you have to do.
 	}
 
 }

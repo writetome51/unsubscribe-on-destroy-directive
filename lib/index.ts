@@ -16,11 +16,11 @@ export abstract class UnsubscribeOnDestroyComponent extends BaseClass implements
 
 
 	ngOnDestroy() {
-		this._unsubscribeAll();
+		this.__unsubscribeAll();
 	}
 
 
-	protected _unsubscribeAll(): void {
+	private __unsubscribeAll(): void {
 		this._subscriptions.forEach((subscription) => {
 			if (typeof subscription !== ('undefined' || 'null')) {
 				subscription.unsubscribe();

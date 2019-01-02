@@ -15,7 +15,7 @@
     "angular",
     "component",
     "subscription",
- "subscriptions",
+    "subscriptions",
     "unsubscribe",
     "ondestroy",
     "abstract",
@@ -31,6 +31,5 @@
   "devDependencies": {
     "typescript": "^3.0.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

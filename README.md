@@ -1,14 +1,17 @@
 # UnsubscribeOnDestroyComponent
 
 An abstract Angular component class that any Angular component class which uses  
-Subscriptions may want to extend from.  During the `ngOnDestroy()` hook, it  
-unsubscribes from all Subscriptions inside `this._subscriptions`.  The idea is  
-to have your component classes that use Subscriptions inherit from this class,  
-add their subscriptions to `this._subscriptions`, then let this class  
+Subscriptions may want to extend from.  
+(This class is made specifically for use in Angular 4+.)
+
+During the `ngOnDestroy()` hook, it unsubscribes from all Subscriptions inside   
+`this._subscriptions`. 
+The idea is to have your component classes that use Subscriptions  
+inherit from this class, add their subscriptions to `this._subscriptions`, then let this class  
 automatically unsubscribe  from all of them during `ngOnDestroy()`.  
 
-NOTE:  Adding the subscriptions to `this._subscriptions` should (probably) be  
-done in the `ngAfterViewInit()` hook.
+NOTE:  Adding the subscriptions to `this._subscriptions` should be done in the  
+`ngAfterViewInit()` hook.
 
 ## Installation
 

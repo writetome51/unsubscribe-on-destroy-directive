@@ -1,8 +1,9 @@
 # UnsubscribeOnDestroyComponent
 
 An abstract Angular component class that any Angular component class which uses  
-Subscriptions may want to extend from.  
-(This class is made specifically for use in Angular 4+.)
+[Subscriptions](https://rxjs-dev.firebaseapp.com/api/index/class/Subscription) may want to extend 
+from.  
+(This class is made for use in Angular 4 and above.)
 
 During the `ngOnDestroy()` hook, it unsubscribes from all Subscriptions inside   
 `this._subscriptions`. 
@@ -13,27 +14,37 @@ automatically unsubscribe  from all of them during `ngOnDestroy()`.
 NOTE:  Adding the subscriptions to `this._subscriptions` should be done in the  
 `ngAfterViewInit()` hook.
 
-## Installation
 
-You must have npm installed first. Then, in the command line:
+## Usage Example
+```
+export class ExamplePageComponent extends UnsubscribeOnDestroyComponent 
+	implements AfterViewInit {
 
-    npm install @writetome51/unsubscribe-on-destroy-component
+	constructor() {
+		super();
+	}
 
-## Loading
+	ngAfterViewInit() {
+		this._subscriptions = this._subscriptions.concat(
+			// Add any _subscriptions this component is using to this array:
+			[
+				this.subscriptionOne,
+				this.subscriptionTwo,
+				this.subscriptionThree
+			]
+		);
+		// And that's all you have to do.
+	}
 
-    // if using TypeScript:
-    import { UnsubscribeOnDestroyComponent } from '@writetome51/unsubscribe-on-destroy-component';
-    // if using ES5 JavaScript:
-    var  UnsubscribeOnDestroyComponent = 
-            require('@writetome51/unsubscribe-on-destroy-component').UnsubscribeOnDestroyComponent;
-    
+}
+```  
 
 ## Properties
-```
-protected  _subscriptions : Subscription[]
 
-public  className : string  (read-only)
-```
+protected  &nbsp; `_subscriptions`:  &nbsp; [Subscription](https://rxjs-dev.firebaseapp.com/api/index/class/Subscription)[]
+
+public &nbsp;`className`: &nbsp; string  (read-only)
+
 
 ## Methods
 ```
@@ -84,34 +95,27 @@ protected   _runMethod_and_returnThis(
 ) : this
 ```
 
-## Usage Example
-```
-export class ExamplePageComponent extends UnsubscribeOnDestroyComponent 
-	implements AfterViewInit {
-
-	constructor() {
-		super();
-	}
-
-	ngAfterViewInit() {
-		this._subscriptions = this._subscriptions.concat(
-			// Add any _subscriptions this component is using to this array:
-			[
-				this.subscriptionOne,
-				this.subscriptionTwo,
-				this.subscriptionThree
-			]
-		);
-		// And that's all you have to do.
-	}
-
-}
-```
 
 ## Inheritance Chain
 
 UnsubscribeOnDestroyComponent<--[BaseClass](https://github.com/writetome51/typescript-base-class#baseclass)
 
+
+
+## Installation
+
+You must have npm installed first. Then, in the command line:
+
+    npm install @writetome51/unsubscribe-on-destroy-component
+
+## Loading
+
+    // if using TypeScript:
+    import { UnsubscribeOnDestroyComponent } from '@writetome51/unsubscribe-on-destroy-component';
+    // if using ES5 JavaScript:
+    var  UnsubscribeOnDestroyComponent = 
+            require('@writetome51/unsubscribe-on-destroy-component').UnsubscribeOnDestroyComponent;
+  
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

@@ -18,23 +18,23 @@ NOTE:  Adding the subscriptions to `this._subscriptions` should be done in the
 ## Usage Example
 ```
 export class ExamplePageComponent extends UnsubscribeOnDestroyComponent 
-	implements AfterViewInit {
+    implements AfterViewInit {
 
-	constructor() {
-		super();
-	}
+    constructor() {
+        super();
+    }
 
-	ngAfterViewInit() {
-		this._subscriptions = this._subscriptions.concat(
-			// Add any _subscriptions this component is using to this array:
-			[
-				this.subscriptionOne,
-				this.subscriptionTwo,
-				this.subscriptionThree
-			]
-		);
-		// And that's all you have to do.
-	}
+    ngAfterViewInit() {
+        this._subscriptions = this._subscriptions.concat(
+            // Add any _subscriptions this component is using to this array:
+            [
+                this.subscriptionOne,
+                this.subscriptionTwo,
+                this.subscriptionThree
+            ]
+        );
+        // And that's all you have to do.
+    }
 
 }
 ```  
@@ -49,9 +49,9 @@ public &nbsp;`className`: &nbsp; string  (read-only)
 ## Methods
 ```
 ngOnDestroy() : void
-     // Angular lifecycle hook.
-     // When called, all Subscriptions inside this._subscriptions are unsubscribed.
-     // If you override this, don't forget to call super.ngOnDestroy() inside the overrider.
+    // Angular lifecycle hook.
+    // When called, all Subscriptions inside this._subscriptions are unsubscribed.
+    // If you override this, don't forget to call super.ngOnDestroy() inside the overrider.
 ``` 
 The methods below are not important to know about in order to use this  
 class.  They're inherited from [BaseClass](https://github.com/writetome51/typescript-base-class#baseclass) .

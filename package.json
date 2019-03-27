@@ -29,11 +29,11 @@
   },
   "homepage": "https://github.com/writetome51/unsubscribe-on-destroy-component#readme",
   "devDependencies": {
-    "typescript": "^3.0.1"
+    "rxjs-tslint": "^0.1.7"
   },
   "dependencies": {
-    "@writetome51/base-class": "~0.0.2",
-    "rxjs": "^5.5.6",
-    "@angular/core": "^5.2.8"
+    "@angular/core": ">=5.2.8",
+    "@writetome51/base-class": "~0.0.3",
+    "rxjs": ">=5.5.6"
   }
 }

@@ -30,19 +30,21 @@ You must have npm installed first. Then, in the command line:
 
 ## Properties
 ```
-protected _subscriptions : Subscription[]  (read-writable)
+protected  _subscriptions : Subscription[]
 
-public className : string (read-only)
+public  className : string  (read-only)
 ```
 
 ## Methods
 ```
 ngOnDestroy() : void
-     // lifecycle hook.
+     // Angular lifecycle hook.
      // When called, all Subscriptions inside this._subscriptions are unsubscribed.
      // If you override this, don't forget to call super.ngOnDestroy() inside the overrider.
-
-
+``` 
+The methods below are not important to know about in order to use this  
+class.  They're inherited from [BaseClass](https://github.com/writetome51/typescript-base-class#baseclass) .
+``` 
 protected   _createGetterAndOrSetterForEach(
                   propertyNames: string[],
                   configuration: IGetterSetterConfiguration

@@ -14,7 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var base_class_1 = require("@writetome51/base-class");
-// This class is made specifically for use in Angular 4+.
+// This class is made specifically for use in Angular 4 and above.
 // Any component class using Subscriptions should extend from this.
 // During the ngOnDestroy() hook, it unsubscribes from all subscriptions inside
 // this._subscriptions.
@@ -33,7 +33,7 @@ var UnsubscribeOnDestroyComponent = /** @class */ (function (_super) {
     };
     UnsubscribeOnDestroyComponent.prototype.__unsubscribeAll = function () {
         this._subscriptions.forEach(function (subscription) {
-            if (typeof subscription !== ('undefined' || 'null')) {
+            if (typeof subscription !== 'undefined') {
                 subscription.unsubscribe();
             }
         });

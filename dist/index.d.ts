@@ -1,9 +1,10 @@
-import { OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
 import { BaseClass } from '@writetome51/base-class';
+import { OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 
 export declare abstract class UnsubscribeOnDestroyComponent extends BaseClass implements OnDestroy {
+
 
 	protected _subscriptions: Subscription[];
 
@@ -12,4 +13,6 @@ export declare abstract class UnsubscribeOnDestroyComponent extends BaseClass im
 
 
 	private __unsubscribeAll;
+
+
 }

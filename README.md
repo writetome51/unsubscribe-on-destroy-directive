@@ -3,7 +3,7 @@
 An abstract Angular component class that any Angular component class which uses  
 [Subscriptions](https://rxjs-dev.firebaseapp.com/api/index/class/Subscription) may want to extend 
 from.  
-(This class is made for use in Angular 4 and above.)
+(This version is made for use in Angular 5.x.x and RxJS 5.x.x)
 
 During the `ngOnDestroy()` hook, it unsubscribes from all Subscriptions inside   
 `this._subscriptions`. 

@@ -1,6 +1,6 @@
 import { BaseClass } from '@writetome51/base-class';
 import { OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs/Subscription';
 
 // This class is made specifically for use in Angular 4 and above.
 // Any component class using Subscriptions should extend from this.

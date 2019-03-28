@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/unsubscribe-on-destroy-component",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Abstract Angular class that unsubscribes from all subscriptions during ngOnDestroy()",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,9 +18,9 @@
     "subscriptions",
     "unsubscribe",
     "ondestroy",
+    "typescript",
     "abstract",
-    "class",
-    "typescript"
+    "class"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
@@ -30,8 +30,8 @@
   "homepage": "https://github.com/writetome51/unsubscribe-on-destroy-component#readme",
   "devDependencies": {},
   "dependencies": {
-    "@angular/core": "^5.2.8",
+    "@angular/core": ">=6.0.1",
     "@writetome51/base-class": "~0.0.3",
-    "rxjs": "^5.5.6"
+    "rxjs": "^6.1.0"
   }
 }

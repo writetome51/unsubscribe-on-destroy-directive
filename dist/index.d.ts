@@ -1,18 +1,15 @@
-import { BaseClass } from '@writetome51/base-class';
 import { OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
 
 
-export declare abstract class UnsubscribeOnDestroyComponent extends BaseClass implements OnDestroy {
+export declare abstract class UnsubscribeOnDestroyComponent implements OnDestroy {
 
-
-	protected _subscriptions: Subscription[];
+	protected _subscriptions: {
+		unsubscribe: () => any;
+	}[];
 
 
 	ngOnDestroy(): void;
 
 
 	private __unsubscribeAll;
-
-
 }

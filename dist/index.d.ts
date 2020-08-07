@@ -3,9 +3,7 @@ import { OnDestroy } from '@angular/core';
 
 export declare abstract class UnsubscribeOnDestroyComponent implements OnDestroy {
 
-	protected _subscriptions: {
-		unsubscribe: () => any;
-	}[];
+	protected _subscriptions: Array<{ unsubscribe: () => any }>;
 
 
 	ngOnDestroy(): void;

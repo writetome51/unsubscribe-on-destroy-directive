@@ -1,7 +1,8 @@
 {
   "name": "@writetome51/unsubscribe-on-destroy-component",
-  "version": "3.0.0",
-  "description": "Abstract Angular class that unsubscribes from all subscriptions during ngOnDestroy()",
+  "version": "4.0.0",
+  "description": "Abstract Angular component that unsubscribes from subscriptions during ngOnDestroy()",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -31,6 +32,6 @@
   "devDependencies": {},
   "dependencies": {
     "@angular/core": ">=6.0.1",
-    "@writetome51/has-value-no-value": "^1.0.2"
+    "@writetome51/has-value-no-value": "^2.0.0"
   }
 }

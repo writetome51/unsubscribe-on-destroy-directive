@@ -6,15 +6,12 @@ from.
 
 During the `ngOnDestroy()` hook, it unsubscribes from all Subscriptions inside   
 `this._subscriptions`. 
-The idea is to have your component classes that use Subscriptions  
-inherit from this class, add their subscriptions to `this._subscriptions`, then let this class  
-automatically unsubscribe  from all of them during `ngOnDestroy()`.  
-
-NOTE:  Adding the subscriptions to `this._subscriptions` should be done in the  
-`ngAfterViewInit()` hook.
+Have your component classes that use Subscriptions  
+inherit from this class, add their subscriptions to `this._subscriptions`, then let  
+this class automatically unsubscribe from all of them during `ngOnDestroy()`.  
 
 
-## Usage Example
+## Example
 ```
 export class ExamplePageComponent extends UnsubscribeOnDestroyComponent 
     implements AfterViewInit {
@@ -28,7 +25,6 @@ export class ExamplePageComponent extends UnsubscribeOnDestroyComponent
                 this.subscriptionThree
             ]
         );
-        // And that's all you have to do.
     }
 
 }
@@ -36,7 +32,7 @@ export class ExamplePageComponent extends UnsubscribeOnDestroyComponent
 
 ## Properties
 ```ts
-protected _subscriptions: { unsubscribe: () => any }[]
+protected _subscriptions: Array<{ unsubscribe: () => any }>
 ```
 
 
@@ -44,9 +40,6 @@ protected _subscriptions: { unsubscribe: () => any }[]
 ```
 ngOnDestroy() : void
     // Angular lifecycle hook.
-    // When called, all subscriptions inside this._subscriptions are unsubscribed.
-    // If you override this, don't forget to call super.ngOnDestroy() inside the 
-    // overrider.
 ``` 
 
 
@@ -56,11 +49,8 @@ ngOnDestroy() : void
 
 ## Loading
 ```ts
-// if using TypeScript:
-import { UnsubscribeOnDestroyComponent } from '@writetome51/unsubscribe-on-destroy-component';
-// if using ES5 JavaScript:
-var  UnsubscribeOnDestroyComponent = 
-    require('@writetome51/unsubscribe-on-destroy-component').UnsubscribeOnDestroyComponent;
+import { UnsubscribeOnDestroyComponent } 
+	from '@writetome51/unsubscribe-on-destroy-component';
 ```
 
 ## License

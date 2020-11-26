@@ -1,7 +1,7 @@
 {
-  "name": "@writetome51/unsubscribe-on-destroy-component",
-  "version": "4.0.0",
-  "description": "Abstract Angular component that unsubscribes from subscriptions during ngOnDestroy()",
+  "name": "@writetome51/unsubscribe-on-destroy-directive",
+  "version": "0.0.1",
+  "description": "Abstract Angular directive that unsubscribes from Subscriptions during ngOnDestroy()",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,11 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/writetome51/unsubscribe-on-destroy-component.git"
+    "url": "git+https://github.com/writetome51/unsubscribe-on-destroy-directive.git"
   },
   "keywords": [
     "angular",
-    "component",
+    "directive",
     "subscription",
     "subscriptions",
     "unsubscribe",
@@ -26,12 +26,11 @@
   "author": "Steve Thompson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/writetome51/unsubscribe-on-destroy-component/issues"
+    "url": "https://github.com/writetome51/unsubscribe-on-destroy-directive/issues"
   },
-  "homepage": "https://github.com/writetome51/unsubscribe-on-destroy-component#readme",
+  "homepage": "https://github.com/writetome51/unsubscribe-on-destroy-directive#readme",
   "devDependencies": {},
   "dependencies": {
-    "@angular/core": ">=6.0.1",
-    "@writetome51/has-value-no-value": "^2.0.0"
+    "@angular/core": ">=6.0.1"
   }
 }

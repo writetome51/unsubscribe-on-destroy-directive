@@ -1,13 +1,14 @@
 import { OnDestroy } from '@angular/core';
 
 
-export declare abstract class UnsubscribeOnDestroyComponent implements OnDestroy {
+export declare abstract class UnsubscribeOnDestroyDirective implements OnDestroy {
 
-	protected _subscriptions: Array<{ unsubscribe: () => any }>;
+	protected _subscriptions: Array<{ unsubscribe: () => any; }>;
 
 
 	ngOnDestroy(): void;
 
 
 	private __unsubscribeAll;
+
 }
